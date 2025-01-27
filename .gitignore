@@ -1,4 +1,12 @@
+# Node.js dependencies
 node_modules/
+
+# Build artifacts
 dist/
+
+# Environment variables
 .env
+
+# OS-specific files
 .DS_Store
+Thumbs.db
