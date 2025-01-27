@@ -1,0 +1,62 @@
+//checking all database:
+show dbs
+
+//Using or creating and using database (If not already present)
+use animeCharacters
+
+//creating a collection;
+db.createCollection("info")
+
+//Inserting one
+db.info.insertOne({
+    name: "Goku",
+    age: 43,
+    powers: ["Super Saiyan Trnasformation" , "Ki-based attacks", "Ultra-Instincts"],
+    Affiliation: "Z fighters"
+})
+//Inserting many
+db.info.insertMany([
+    {
+        name: "Goku",
+        age: 43,
+        powers: ["Super Saiyan Trnasformation" , "Ki-based attacks", "Ultra-Instincts"],
+        Affiliation: "Z fighters"
+    },
+    {
+        name:"Naruto Uzamaki",
+        age: 17,
+        powers: ["Sage Mode", "Six paths chakra", "Rasengan","Shadow Clone",],
+        Affiliation: "Konohagakure"
+    },
+    {
+        name: "Levi Ackerman",
+        age: 30,
+        powers:["High Combat Skill with ODM gear" , "Enchanced physical abilities"],
+        affiliation: "Scout Regiment"
+    },
+    {
+        name: "Saitama",
+        age: 25,
+        powers: ["Limitless Physical strength", "Incredible speed , agility and Stamina"],
+        Affiliation: "Hero Association"
+    }
+])
+
+
+//searching all info
+db.info.find()
+
+//searching and sorting by name 
+db.info.find().sort({age: 1})
+//Note :1 is ascending and -1 is descending
+
+//searching and sirting and limiting the results
+db.info.find().sort({age: 1}).limit(3)
+
+//updating
+db.info.updateOne(
+{name: "Goku"}, 
+{$set: {name: "Son Goku"}})
+
+//Deleting:
+db.info.deleteOne({name: "Saitama"})

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Battle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="registerhere">
+      <input
+        type="text"
+        id="CommaSpName"
+        placeholder="Enter Pokémon names, comma-separated"
+      />
+      <button id="RegisterBTN">Register Pokémon</button>
+    </div>
+    <div class="card-store" id="cardhold" style="display: none">
+      <div id="card1" class="card">
+        <img src="" alt="sprites" srcset="" id="img1" />
+        <label for="" class="label">Pokemon Name: </label>
+        <span id="player1Name"></span>
+        <label for="" class="label">Type: </label>
+        <span id="player1Type"></span>
+        <label for="" class="label">Health: </label>
+        <span id="player1Health"></span>
+        <label for="" class="label">Attack: </label>
+        <span id="player1Attack"></span>
+        <label for="" class="label">Defence: </label>
+        <span id="player1Defence"></span>
+      </div>
+
+      <div id="card2" class="card">
+        <img src="" alt="sprites" srcset="" id="img2" />
+        <label for="" class="label">Pokemon Name: </label>
+        <span id="player2Name"></span>
+        <label for="" class="label">Type: </label>
+        <span id="player2Type"></span>
+        <label for="" class="label">Health: </label>
+        <span id="player2Health"></span>
+        <label for="" class="label">Attack: </label>
+        <span id="player2Attack"></span>
+        <label for="" class="label">Defence: </label>
+        <span id="player2Defence"></span>
+      </div>
+    </div>
+    <div id="battleLog"></div>
+
+    <script type="module" src="./dist/index.js"></script>
+    <script type="module" src="./dist/classes/Pokemon.js"></script>
+  </body>
+</html>
